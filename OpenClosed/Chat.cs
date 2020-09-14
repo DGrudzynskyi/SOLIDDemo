@@ -1,4 +1,5 @@
 using DIP;
+using DIP.MessageTypes;
 
 namespace OpenClosed {
     class Chat {
@@ -17,6 +18,7 @@ namespace OpenClosed {
 
             while(readNextMessage) {
                 var message1 = _messagesFactory.create(messageType);
+
                 readNextMessage = _reader.build(message1);
                 _sender.Send(message1);
             }

@@ -8,15 +8,15 @@ namespace Chat
 {
     class Program
     {
-        // static void Main(string[] args)
-        // {
-        //     var readNextMessage = true;
-        //     while(readNextMessage) {
-        //     var message1 = new ConsoleMessage();
-        //         readNextMessage = message1.build();
-        //         message1.Send();
-        //     }
-        // }
+        static void Main(string[] args)
+        {
+            var readNextMessage = true;
+            while(readNextMessage) {
+                var message1 = new ConsoleMessage();
+                readNextMessage = message1.build();
+                message1.Send();
+            }
+        }
 
         // static void Main(string[] args)
         // {
@@ -29,7 +29,7 @@ namespace Chat
 
         // static void Main(string[] args)
         // {
-        //     var chat = new DIP.Chat(new ConsoleMessageReader(), new ConsoleMessageSender());
+        //     var chat = new DIP.Chat(new ConsoleMessageReader(), new BatchConsoleMessageSender());
         //     chat.DOChat(true);
 
         //     Console.Read();
@@ -55,7 +55,7 @@ namespace Chat
         // static void Main(string[] args)
         // {
         //     var chat = new BrokenInterfaceSegregation.Chat(
-        //         new ConsoleMessageTransmitter(), 
+        //         new BatchConsoleMessageTransmitter(), 
         //         new BatchConsoleMessageTransmitter(), 
         //         new DefaultMessagesFactory()
         //     );
@@ -64,13 +64,21 @@ namespace Chat
         //     Console.Read();
         // }
 
-        static void Main(string[] args)
-        {
-            var rectangle = new Rectangle(5,6);
-            rectangle.Height = 2;
-            rectangle.Length = 8;
+        // static void Main(string[] args)
+        // {
+        //     var rectangle = new Square(5);
 
-            LiscovSubstitution.RectangleChecker.CheckIt(rectangle);
-        }
+        //     LSExample(rectangle);
+
+        //     Console.ReadLine();
+        // }
+
+        // static void LSExample(Rectangle rectangle) {
+
+        //     rectangle.Height = 2;
+        //     rectangle.Length = 8;
+
+        //     LiscovSubstitution.RectangleChecker.CheckIt(rectangle);
+        // }
     }
 }

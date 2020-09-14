@@ -6,13 +6,13 @@ namespace LiscovSubstitution
         {
         }
 
-        public new double Length
+        public override double Length
         {
             get => base.Length;
             set => SetSize(value);
         }
 
-        public new double Height
+        public override double Height
         {
             get => base.Height;
             set => SetSize(value);
